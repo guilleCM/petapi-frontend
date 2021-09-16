@@ -1,8 +1,9 @@
 {
-  "locales": ["en", "ca", "ar", "he"],
-  "defaultLocale": "en",
+  "locales": ["en", "es", "ca", "de"],
+  "defaultLocale": "es",
   "pages": {
     "*": ["common"],
-    "/": ["home"]
+    "/": ["home"],
+    "/perros": ["perros"]
   }
 }

@@ -1,0 +1,66 @@
+.collapseFiltersContainer {
+    width: -webkit-fill-available;
+    text-align: -webkit-right;
+}
+.collapseFilters {
+    display: none;
+}
+.adoptRibbon {
+    top: 360px;
+    height: 32px;
+}
+@media (max-width: 769px) {
+    .dogsForm {
+        border-color: #ddd;
+        display: block;
+    }
+    .collapseFilters {
+        display: block;
+        padding-left: 20px;
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+}
+.dogsForm > div {
+    padding-top: 20px;
+}
+.dogsFormBtn {
+    margin-right: 20px;
+}
+.dogsFormHidden {
+    display: none;
+}
+.dogsFormShow {
+    display: block;
+}
+@media (min-width: 769px) {
+    .dogsFormHidden {
+        display: block;
+    }
+    .dogsFormShow {
+        display: block;
+    }
+}
+.dogCardCover {
+    max-height: 400px;
+    width: auto;
+    max-width: 100%;
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 1;
+}
+.dogCardCoverBg {
+    max-height: 400px;
+    min-height: 400px;
+    width: auto;
+    width: 100%;
+    margin: auto;
+    z-index: 0;
+    filter: brightness(0.8) blur(3px);
+    -webkit-filter: brightness(0.8) blur(3px);
+}
+.dogCardCoverContainer > div {
+    overflow: hidden;
+}

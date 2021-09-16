@@ -1,0 +1,54 @@
+.appHeader {
+  background: black;
+  height: 80px;
+}
+.logoHeader {
+  height: 100%;
+  padding: 8px;
+  float: left;
+  cursor: pointer;
+}
+.sloganHeader {
+  height: 100%;
+  padding: 5px;
+  float: left;
+  cursor: pointer;
+}
+@media (max-width: 588px) {
+  .sloganHeader {
+      display: none;
+  }
+}
+.sloganImg {
+  border-left: solid #b1b1b1 1px;
+}
+.titleHeaderContainer {
+  display: inline;
+}
+.titleHeader {
+  color: white;;
+}
+.footerCol {
+  background-color: black;
+  text-align: center;
+}
+.footerDescription {
+  color: white !important;
+}
+.appHeader :global .ant-menu {
+  background-color: black;
+  justify-content: end;
+}
+.headMenu > li {
+  line-height: 80px;
+  background: #101010;
+}
+.headMenu > li.ant-menu-item-active, li.ant-menu-item-selected {
+  background: #101010 !important;
+}
+.headMenu > li:hover {
+  background: #101010 !important;
+}
+.headMenu > li:active {
+  background: #101010 !important;
+}

@@ -1,0 +1,233 @@
+.helpList {
+  /* border: 1px solid #efefef;
+  border-radius: 4px; */
+  margin-bottom: 48px;
+  /* background-color: #ffffff; */
+  margin-bottom: 16px;
+  border-bottom: 0px solid #ffffff !important;
+}
+.listImg, .listImgMobileHidden, .listImgMobileShow {
+  width: 272px;
+}
+@media (max-width: 991px) {
+  .listImgMobileHidden {
+      display: none;
+  }
+  .helpList {
+      text-align: center;
+  }
+}
+.helpListTextWrapper {
+  margin: auto;
+  padding: 20px;
+}
+@media (min-width: 992px) {
+  .helpList {
+      /* width: 50%; */
+      display: inline-flex;
+      margin-bottom: 62px;
+      margin-top: 32px;
+  }
+  .listImg, .listImgMobileHidden, .listImgMobileShow {
+      height: auto;
+      width: 50%;
+      max-width: 50%;
+  }
+  .listImgMobileShow {
+      display: none;
+  }
+  .helpListTextWrapper > h4 {
+      font-size: 38px;
+      line-height: 1.1;
+  }
+  .helpListTextWrapper > p {
+      font-size: 18px;
+  }
+
+}
+/* @media (min-width: 1300) {
+  .listImg {
+      height: 200px;
+      width: auto;
+  }
+} */
+@media (min-width: 1300) {
+  .listImg, .listImgMobileHidden, .listImgMobileShow {
+      height: 200px;
+      width: auto;
+  }
+}
+.welcomeRow {
+  min-height: 700px;
+  max-height: 700px;
+}
+.welcomeCol {
+  background-image: url("/wp (1)-mirror.jpeg");
+  background-size: cover;
+  background-position: 50% 40%;
+}
+@media (max-width: 815px) {
+  .welcomeCol {
+      background-image: url("/wp (1).jpeg");
+  }
+}
+/* .welcomeColLeft {
+  background-image: url("/wp (3)-mirror.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #231b18;
+}
+.welcomeColRight {
+
+} */
+.welcomeTitle {
+  /* background-image: linear-gradient( 
+      0deg
+       ,rgba(255,0,0,0),#000000a6); */
+  padding: 20px;
+  padding-bottom: 0px;
+  text-shadow: 1px 1px 4px #000;
+  color: #fff;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 1.23;
+}
+.welcomeDescription {
+  /* position: absolute; */
+  bottom: 0;
+  text-shadow: 1px 1px 4px #000;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.35;
+}
+.welcomeWrapper {
+  max-width: 50%;
+  position: relative;
+  left: 50%;
+  top: 35%;
+  padding-right: 120px;
+}
+@media (min-width: 1419px) {
+  .welcomeDescription {
+      padding-right: 80px;
+  }
+}
+@media (min-width: 1029px) {
+  .welcomeTitle {
+      font-size: 55px;
+  }
+}
+@media (max-width: 589px) {
+  .welcomeTitle {
+      font-size: 30px;
+  }
+  .welcomeDescription {
+      font-weight: 400;
+      font-size: 19px;
+  }
+  .welcomeWrapper {
+      padding-right: 0px;
+  }
+  .welcomeRow {
+      min-height: 500px;
+      max-height: 500px;
+  }
+}
+@media (max-width: 815px) {
+  .welcomeWrapper {
+      left: auto;
+      max-width: 70%;
+  }
+}
+.explainApp {
+  margin-top: 45px;
+  text-align: center;
+}
+.explainAppDescription {
+  margin-bottom: 45px;
+}
+@media (min-width: 1029px) {
+  .explainApp {
+      padding-top: 25px;
+  }
+  .explainAppDescription {
+      font-size: 18px;
+  }
+}
+@media (max-width: 992px) {
+  .explainAppCol {
+      padding: 20px;
+  }
+}
+.explainPointsRow {
+  background-color: #ffffff;
+}
+.explainPointsCol {
+  background-color: #ffffff;
+}
+.explainPointsTitle {
+  margin-top: 45px;
+  text-align: center;
+  padding-bottom: 25px;
+}
+.lastEntriesCol {
+  text-align: center;
+}
+.goToAllDogsCol {
+  padding: 20px;
+  margin-top: 30px;
+  margin-bottom: 65px;
+}
+.avatarEntrie {
+  border: none !important;
+  box-shadow: 3px 5px 12px 0px #484848;
+}
+@media (max-width: 768px) {
+  .lastEntriesGroup {
+      display: inline-grid;
+  }
+  .avatarEntrie:not(:first-child) {
+      margin-left: 0px !important;
+      margin-top: -22px;
+  }
+  .avatarEntrie {
+      box-shadow: 0px -3px 13px 2px #484848;
+  }
+}
+.subRow {
+  padding: 20px;
+  background-color: #232323;
+  background-image: url("/subscription.webp");
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-position-x: 20px;
+}
+@media (max-width: 768px) {
+  .subRow {
+      padding-bottom: 110px;
+      background-position-x: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .subRow {
+      background-position-x: 30%;
+  }
+}
+.subTitle {
+  color: white !important;
+  text-align: center;
+}
+.subDescription {
+  color:#a8a8a8!important;
+  text-align: center;
+  font-size: 16px;
+}
+.modalUnsubBtnDiv {
+  text-align: end;
+  padding-top: 25px;
+}

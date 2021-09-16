@@ -1,5 +1,7 @@
 {
-  "title": "Example with-next-translate",
-  "powered": "Powered by",
-  "alt": "Vercel logo"
+  "dogList": "Dog list",
+  "madeWith": "Made with",
+  "by": "by",
+  "subscribe": "Subscribe",
+  "subscribeSuccess": "You have successfully subscribed!"
 }

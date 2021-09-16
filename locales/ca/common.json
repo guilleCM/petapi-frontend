@@ -1,5 +1,7 @@
 {
-  "title": "Demostració with-next-translate",
-  "powered": "Powered by",
-  "alt": "Vercel logo"
+  "dogList": "Lista de gossos",
+  "madeWith": "Fet amb",
+  "by": "per",
+  "subscribe": "Suscriute",
+  "subscribeSuccess": "Te has suscrit correctament!"
 }
