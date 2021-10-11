@@ -30,10 +30,9 @@ export default function PageLayout({ children }) {
         allowLocalhostAsSecureOrigin: true,
       });
     });
-
-    return () => {
-      window.OneSignal = undefined;
-    };
+    // return () => {
+    //   window.OneSignal = undefined;
+    // };
   }, []);
   return (
     <Layout>
@@ -77,7 +76,7 @@ export default function PageLayout({ children }) {
           </Menu.Item>
         </Menu>
       </Header>
-      <Content>{children}</Content>
+      <Content className={styles.content}>{children}</Content>
       <Footer className={styles.footerCol}>
         <Row>
           <Col xs={24} sm={24} md={24} lg={{ span: 18, offset: 3 }}>

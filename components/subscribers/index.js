@@ -16,7 +16,7 @@ const SubscriberForm = () => {
     // const res = await fetch('http://127.0.0.1:5000/api/dogs')
     // const sourceData = await res.json()
     setSubscribing(true);
-    const url = `http://127.0.0.1:5000/api/subscribers/${values.email}`;
+    const url = `http://141.94.207.39/api/subscribers/${values.email}`;
     // const data = values;
     fetch(url, {
       method: 'PUT', // or 'PUT'

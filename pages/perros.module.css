@@ -8,6 +8,7 @@
 .adoptRibbon {
     top: 360px;
     height: 32px;
+    z-index: 2;
 }
 @media (max-width: 769px) {
     .dogsForm {

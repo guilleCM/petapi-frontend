@@ -12,6 +12,7 @@ import {
 } from '@ant-design/icons';
 
 import PageLayout from '../components/layout';
+import { API_ENDPOINT } from '../constants';
 
 import styles from './perros.module.css';
 
@@ -126,15 +127,15 @@ function Perros({ sourceData }) {
       if (values[filterProp] !== '0') {
         switch (filterProp) {
           case 'race':
-            newFilteredData = filteredData.filter((dog) => dog.race_mother.indexOf(values[filterProp]) >= 0 || dog.race_parent.indexOf(values[filterProp]) >= 0);
+            newFilteredData = sourceData.filter((dog) => dog.race_mother.indexOf(values[filterProp]) >= 0 || dog.race_parent.indexOf(values[filterProp]) >= 0);
             break;
           case 'age':
             // eslint-disable-next-line no-case-declarations
             const isPuppy = values[filterProp] === '2';
-            newFilteredData = filteredData.filter((dog) => dog.is_puppy === isPuppy);
+            newFilteredData = sourceData.filter((dog) => dog.is_puppy === isPuppy);
             break;
           default:
-            newFilteredData = filteredData.filter((dog) => dog[filterProp] === Number(values[filterProp]));
+            newFilteredData = sourceData.filter((dog) => dog[filterProp] === Number(values[filterProp]));
             break;
         }
       }
@@ -158,7 +159,7 @@ function Perros({ sourceData }) {
       </Head>
       <div className="site-card-wrapper">
         <Row style={{
-          position: 'sticky', top: 0, zIndex: 1, background: '#f0f2f5', borderBottom: '1px solid #b4b4b4',
+          position: 'sticky', top: 0, zIndex: 20, background: '#f0f2f5', borderBottom: '1px solid #b4b4b4',
         }}
         >
           <Col span={24} style={{ padding: 20 }} className={expand ? styles.dogsFormHidden : styles.dogsFormShow}>
@@ -246,12 +247,12 @@ function Perros({ sourceData }) {
                     <>
                       <img
                         alt={dog.id}
-                        src={`http://127.0.0.1:5000/${dog.media[0]}`}
+                        src={`${API_ENDPOINT}/${dog.media[0]}`}
                         className={styles.dogCardCover}
                       />
                       <img
                         alt={`${dog.id} background`}
-                        src={`http://127.0.0.1:5000/${dog.media[0].replace('static/', 'static/thumb-')}`}
+                        src={`${API_ENDPOINT}/${dog.media[0].replace('static/', 'static/thumb-')}`}
                         className={styles.dogCardCoverBg}
                       />
                     </>
@@ -305,7 +306,7 @@ Perros.defaultProps = {
 };
 
 export async function getServerSideProps(context) {
-  const res = await fetch('http://127.0.0.1:5000/api/dogs');
+  const res = await fetch(`${API_ENDPOINT}/api/dogs`);
   const sourceData = await res.json();
 
   if (!sourceData) {

@@ -1,3 +1,6 @@
+.content {
+  overflow-x: hidden;
+}
 .appHeader {
   background: black;
   height: 80px;

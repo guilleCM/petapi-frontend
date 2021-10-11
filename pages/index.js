@@ -9,6 +9,7 @@ import useTranslation from 'next-translate/useTranslation';
 
 import PageLayout from '../components/layout';
 import SubscriberForm from '../components/subscribers';
+import { API_ENDPOINT } from '../constants';
 
 import styles from './index.module.css';
 
@@ -118,7 +119,7 @@ export default function Home({ sourceData }) {
                       xs: 150, sm: 150, md: 150, lg: 170, xl: 180, xxl: 200,
                     }}
                     key={dog.id}
-                    src={`http://127.0.0.1:5000/${dog.media[0]}`}
+                    src={`${API_ENDPOINT}/${dog.media[0]}`}
                   />
                 ))}
               </Avatar.Group>
@@ -152,7 +153,7 @@ Home.defaultProps = {
 };
 
 export async function getServerSideProps(context) {
-  const res = await fetch('http://127.0.0.1:5000/api/dogs?limit=5');
+  const res = await fetch(`${API_ENDPOINT}/api/dogs?limit=5`);
   const sourceData = await res.json();
   if (!sourceData) {
     return {
