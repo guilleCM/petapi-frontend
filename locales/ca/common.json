@@ -3,5 +3,8 @@
   "madeWith": "Fet amb",
   "by": "per",
   "subscribe": "Suscriute",
-  "subscribeSuccess": "Te has suscrit correctament!"
+  "subscribeSuccess": "Te has suscrit correctament!",
+  "unsubscribeSuccess": "Te has donat de baixa correctament!",
+  "apiError": "Ops! Se ha produit un error procesant la petició",
+  "goHome": "Ir a inici"
 }

@@ -4,6 +4,8 @@ import {
 } from 'antd';
 import useTranslation from 'next-translate/useTranslation';
 
+import { API_ENDPOINT } from '../../constants';
+
 import styles from './style.module.css';
 
 const SubscriberForm = () => {
@@ -16,7 +18,7 @@ const SubscriberForm = () => {
     // const res = await fetch('http://127.0.0.1:5000/api/dogs')
     // const sourceData = await res.json()
     setSubscribing(true);
-    const url = `http://141.94.207.39/api/subscribers/${values.email}`;
+    const url = `${API_ENDPOINT}/api/${values.email}`;
     // const data = values;
     fetch(url, {
       method: 'PUT', // or 'PUT'

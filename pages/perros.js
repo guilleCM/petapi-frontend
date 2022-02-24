@@ -305,7 +305,7 @@ Perros.defaultProps = {
   sourceData: [],
 };
 
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
   const res = await fetch(`${API_ENDPOINT}/api/dogs`);
   const sourceData = await res.json();
 
@@ -322,6 +322,7 @@ export async function getServerSideProps(context) {
     props: {
       sourceData,
     },
+    revalidate: 60, // In seconds
   };
 }
 

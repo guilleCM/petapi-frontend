@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import {
   Layout, Row, Col, Menu,
 } from 'antd';
+import { bool, any } from 'prop-types';
 import useTranslation from 'next-translate/useTranslation';
 
 import 'antd/dist/antd.css';
@@ -15,7 +16,7 @@ import styles from './style.module.css';
 const { Header, Footer, Content } = Layout;
 
 // eslint-disable-next-line react/prop-types
-export default function PageLayout({ children }) {
+export default function PageLayout({ children, withFooter }) {
   const { t } = useTranslation();
   useEffect(() => {
     window.OneSignal = window.OneSignal || [];
@@ -77,21 +78,31 @@ export default function PageLayout({ children }) {
         </Menu>
       </Header>
       <Content className={styles.content}>{children}</Content>
-      <Footer className={styles.footerCol}>
-        <Row>
-          <Col xs={24} sm={24} md={24} lg={{ span: 18, offset: 3 }}>
-            <span className={styles.footerDescription}>
-              {t('common:madeWith')}
-              {' '}
-              <HeartTwoTone twoToneColor="#eb2f96" />
-              {' '}
-              {t('common:by')}
-              {' '}
-              <a href="https://github.com/guilleCM">Guillermo Cirer</a>
-            </span>
-          </Col>
-        </Row>
-      </Footer>
+      {withFooter &&
+        <Footer className={styles.footerCol}>
+          <Row>
+            <Col xs={24} sm={24} md={24} lg={{ span: 18, offset: 3 }}>
+              <span className={styles.footerDescription}>
+                {t('common:madeWith')}
+                {' '}
+                <HeartTwoTone twoToneColor="#eb2f96" />
+                {' '}
+                {t('common:by')}
+                {' '}
+                <a href="https://github.com/guilleCM">Guillermo Cirer</a>
+              </span>
+            </Col>
+          </Row>
+        </Footer>
+      }
     </Layout>
   );
 }
+
+PageLayout.propTypes = {
+  children: any,
+  withFooter: bool,
+};
+PageLayout.defaultProps = {
+  withFooter: true,
+};

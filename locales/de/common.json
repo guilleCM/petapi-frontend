@@ -3,5 +3,8 @@
   "madeWith": "gemaakt met",
   "by": "door",
   "subscribe": "Abonneer",
-  "subscribeSuccess": "U heeft zich succesvol ingeschreven!"
+  "subscribeSuccess": "U heeft zich succesvol ingeschreven!",
+  "unsubscribeSuccess": "Sie haben sich korrekt abgemeldet",
+  "apiError": "Ops! Bei der Bearbeitung der Anfrage ist ein Fehler aufgetreten",
+  "goHome": "Nach Hause gehen"
 }

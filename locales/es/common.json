@@ -3,5 +3,8 @@
   "madeWith": "Hecho con",
   "by": "por",
   "subscribe": "Suscribirse",
-  "subscribeSuccess": "Te has suscrito correctamente!"
+  "subscribeSuccess": "Te has suscrito correctamente!",
+  "unsubscribeSuccess": "Te has dado de baja correctamente!",
+  "apiError": "Ops! Se ha producido un error procesando la petición.",
+  "goHome": "Ir a inicio"
 }

@@ -3,5 +3,8 @@
   "madeWith": "Made with",
   "by": "by",
   "subscribe": "Subscribe",
-  "subscribeSuccess": "You have successfully subscribed!"
+  "subscribeSuccess": "You have successfully subscribed!",
+  "unsubscribeSuccess": "You have been unsubscribed",
+  "apiError": "Ops! An error occurred while processing the request.",
+  "goHome": "Go Home"
 }
